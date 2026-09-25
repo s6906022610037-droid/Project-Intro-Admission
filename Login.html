@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ | รับสมัครนักศึกษา </title>
+    <link rel="stylesheet" href="Css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-img">
+                <img src="image/Logo-K.svg" alt="Logo KMUTNB">
+            </div>
+
+            <span class="logo-text">
+                    มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
+                    <br><span>KING MONGKUT'S UNIVERSITY OF TECHNOLOGY NORTH BANGKOK</span>
+            </span>
+        </div>
+
+        <!-- Button ด้านขวา -->
+        <nav class="nav-reg">
+            <a href="Register.html">ลงทะเบียน</a>
+            <a href="Login.html">เข้าสู่ระบบ</a>
+        </nav>
+    </header>
+
+    <!-- แถบเมนูด้านล่าง -->
+    <nav class="sub-nav">
+        <a href="index.html">หน้าหลัก</a>
+        <a href="admission-calendar.html">ปฏิทินการรับสมัคร</a>
+        <a href="Register-new.html">สมัครนักศึกษาใหม่</a>
+        <a href="regulation.html">ระเบียบรับสมัครนักศึกษาใหม่</a>
+    </nav>
+
+    <!-- หน้าเข้าสู่ระบบ -->
+     <main class="login-wrapper">
+        <div class="login-container">
+            <h2 class="login-title">เข้าสู่ระบบ</h2>
+
+            <form method="post" class="login-form">
+                <!-- ช่องกรอกเลขที่สมัคร -->
+                 <div class="input-group">
+                    <label for="app_id">เลขที่สมัคร</label>
+                    <input type="text" id="app_id" name="app_id" required>
+                 </div>
+
+                 <!-- ช่องกรอกเลขบัตรประชาชน -->
+                  <div class="input-group">
+                    <label for="id_card">เลขบัตรประชาชน</label>
+                    <input type="text" id="id_card" name="id_card" required>
+                  </div>
+
+                  <!-- ปุ่มกดเข้าสู่ระบบ -->
+                   <div class="form-action">
+                    <button type="submit" class="btn-submit">เข้าสู่ระบบ</button>
+                   </div>
+            </form>
+        </div>
+     </main>
+</body>
+</html>

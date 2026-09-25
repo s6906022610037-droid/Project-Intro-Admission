@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สมัครนักศึกษาใหม่ | รับสมัครนักศึกษา </title>
+    <link rel="stylesheet" href="Css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-img">
+                <img src="image/Logo-K.svg" alt="Logo KMUTNB">
+            </div>
+
+            <span class="logo-text">
+                มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
+                <br><span>KING MONGKUT'S UNIVERSITY OF TECHNOLOGY NORTH BANGKOK</span>
+            </span>
+        </div>
+
+        <!-- Button ด้านขวา -->
+        <nav class="nav-reg">
+            <a href="Register.html">ลงทะเบียน</a>
+            <a href="Login.html">เข้าสู่ระบบ</a>
+        </nav>
+    </header>
+
+    <!-- แถบเมนูด้านล่าง -->
+    <nav class="sub-nav">
+        <a href="index.html">หน้าหลัก</a>
+        <a href="admission-calendar.html">ปฏิทินการรับสมัคร</a>
+        <a href="Register-new.html" class="active">สมัครนักศึกษาใหม่</a>
+        <a href="regulation.html">ระเบียบรับสมัครนักศึกษาใหม่</a>
+    </nav>
+
+    <main class="form-container">
+        <form action="#" method="post">
+            <!-- ข้อมูลผู้สมัคร -->
+            <section class="form-section">
+                <h2 class="section-title">ข้อมูลผู้สมัคร</h2>
+                <p class="section-subtitle">กรุณากรอกข้อมูลให้ครบถ้วนและถูกต้อง</p>
+
+                <!-- ตัวแบบฟอร์ม -->
+                <div class="form-row">
+                    <div class="form-group col-title">
+                        <label for="prefix">คำนำหน้า</label>
+                        <select name="prefix" id="prefix">
+                            <option value="" disabled selected>เลือกคำนำหน้า</option>
+                            <option value="mr">นาย</option>
+                            <option value="mrs">นาง</option>
+                            <option value="miss">นางสาว</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-firstname">
+                        <label for="firstname">ชื่อ</label>
+                        <input type="text" name="firstname" id="firstname" placeholder="ชื่อ" required>
+                    </div>
+                    <div class="form-group col-firstname">
+                        <label for="firstname">นามสกุล</label>
+                        <input type="text" name="lastname" id="lastname" placeholder="นามสกุล" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-half">
+                        <label for="id-card">เลขบัตรประชาชน</label>
+                        <input type="text" id="id-card" name="id-card" placeholder="เลขบัตรประชาชน" required>
+                    </div>
+                    <div class="form-group col-half">
+                        <label for="id-card">วันเกิด</label>
+                        <input type="date" id="birthdate" name="birthdate" placeholder="mm / dd / yyyy" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-half">
+                        <label for="phone">เบอร์โทรศัพท์</label>
+                        <input type="tel" id="phone" name="phone" placeholder="08X-XXX-XXXX" required>
+                    </div>
+                    <div class="form-group col-half">
+                        <label for="email">อีเมล</label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ข้อมูลการสมัคร -->
+            <section class="form-section">
+                <h2 class="section-title">ข้อมูลการสมัคร</h2>
+
+                <div class="form-row">
+                    <div class="form-group col-half">
+                        <label for="faculty">คณะที่ต้องการสมัคร</label>
+                        <select id="faculty" name="faculty">
+                            <option value="" disabled selected>เลือกคณะ</option>
+                            <option value="FITM">คณะเทคโนโลยีและการจัดการอุตสาหกรรม</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-half">
+                        <label for="major">สาขาที่ต้องการสมัคร *</label>
+                        <select id="major" name="major">
+                            <option value="" disabled selected>-- กรุณาเลือกสาขาวิชา --</option>
+                            <option value="IT">IT - เทคโนโลยีสารสนเทศ</option>
+                            <option value="ITI">ITI - (เทคโนโลยีสารสนเทศ หลักสูตรต่อเนื่อง)</option>
+                            <option value="ITT">ITT - เทคโนโลยีสารสนเทศและการสื่อสาร (หลักสูตรเทียบโอน)</option>
+                            <option value="INE">INE - วิศวกรรมสารสนเทศและเครือข่าย</option>
+                            <option value="INET">INET - วิศวกรรมสารสนเทศและเครือข่าย (หลักสูตรเทียบโอน)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-full">
+                        <label for="round">รอบการสมัคร</label>
+                        <select id="round" name="round">
+                            <option value="" disabled selected>เลือกรอบการสมัคร</option>
+                            <option value="round1">รอบที่ 1 Portfolio (แฟ้มสะสมผลงาน)</option>
+                            <option value="round2">รอบที่ 2 Quota (โควตา)</option>
+                            <option value="round3">รอบที่ 3 Admission</option>
+                            <option value="round4">รอบที่ 4 Internal/Direct Admission (รับตรงอิสระ / รอบเก็บตก)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-checkbox">
+                    <input type="checkbox" id="confirm" name="confirm" required>
+                    <label for="confirm">ยืนยันว่าข้อมูลถูกต้อง</label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="reset" class="btn-reset">ล้างข้อมูล</button>
+                    <button type="submit" class="btn-submit">ส่งใบสมัคร</button>
+                </div>
+            </section>
+        </form>
+    </main>
+</body>
+
+</html>
