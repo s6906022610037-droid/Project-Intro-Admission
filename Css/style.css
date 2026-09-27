@@ -1,4 +1,3 @@
-/* ตั้งค่าพื้นฐานของเว็บ */
 * {
     margin: 0;
     padding: 0;
@@ -6,14 +5,27 @@
     font-family: 'Kanit', sans-serif; 
 }
 
-body {
-    background-color: #fff; /* สีพื้นหลังเว็บ */
-    color: #000; /* สีตัวอักษรหลัก */
-    display: flex;
-    flex-direction: column;
+html {
+    height: 100%;
 }
 
-/* แถบเมนู Header and Navbar */
+body {
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content,
+.download-wrapper,
+.login-wrapper,
+.register-wrapper,
+.form-container,
+.calendar-container {
+    flex: 1;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -21,32 +33,28 @@ body {
     background-color: #6E0406;
     color: #ffffff;
     padding: 5px 20px;
-    /* box-sizing: 0 2px 10px rgba(0,0,0,0.05); */
 }
 
 .logo {
     display: flex;
-    align-items:  center;
+    align-items: center;
     gap: 12px;
     font-weight: 600;
     font-size: 1.1rem;
 }
 
-/* ตัวหนังสือชื่อสถาบัน */
 .logo-text {
     color: #ffffff;
     font-size: 18px;
     font-weight: 100;
 }
 
-/* Logo สถาบัน */
 .logo-img img {
-  width: 80px;
-  height: auto;
-  object-fit: contain;
+    width: 80px;
+    height: auto;
+    object-fit: contain;
 }
 
-/* Buttom ด้านขวา */
 .nav-reg {
     margin: auto;
     display: flex;
@@ -75,11 +83,10 @@ body {
     color: #6E0406;
 }
 
-/* แถบเมนูด้านล่าง */
 .sub-nav {
     display: flex;
     color: #ffffff;
-    border-bottom: 1px solid #ddd; /* เส้นขอบเมนูข้างล่าง */
+    border-bottom: 1px solid #ddd;
 }
 
 .sub-nav a {
@@ -90,30 +97,24 @@ body {
     padding: 10px 20px;
     font-size: 14px;
     font-weight: 100;
-    border-right: 1px solid #ddd; /* เส้นคั้นระหว่างเมนู */
+    border-right: 1px solid #ddd;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* เพิ่มเส้นคั่นด้านซ้ายสุดให้เมนูแรก */
 .sub-nav a:first-child {
     border-left: 1px solid #ddd;
 }
 
-/* เอฟเฟกต์เวลาเอาเมาส์ชี้เมนู */
 .sub-nav a:hover {
     background-color: #f5f5f5;
     color: #ff0004;
 }
 
-/* สไตล์สำหรับเมนูที่กำลังเปิดอยู่ */
 .sub-nav a.active {
-    font-size: 500;
+    font-weight: 500;
     color: gray;
 }
 
-/* เนื้อหาหลักของเว็ปไซต์ */
-
-/* รูปภาพ Banner */
 .banner-section {
     width: 100%;
     display: flex;
@@ -145,7 +146,7 @@ body {
     font-size: 52px;
     font-weight: 400;
     color: #6E0406;
-    margin-bottom: 40px; /* ระยะห่างระหว่างข้อความกับปุ่ม */
+    margin-bottom: 40px;
 }
 
 .btn-register {
@@ -163,10 +164,8 @@ body {
 .btn-register:hover {
     background-color: #8c2224;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rrgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-
-/* ส่วนของ admission-calendar.html */
 
 .calendar-container {
     width: 100%;
@@ -181,8 +180,6 @@ body {
     display: block;
 }
 
-/* ส่วนของ Login.html */
-
 .login-wrapper {
     display: flex;
     justify-content: center;
@@ -194,7 +191,6 @@ body {
     max-width: 500px;
 }
 
-/* หัวข้อเข้าสู่ระบบ */
 .login-title {
     text-align: center;
     font-size: 32px;
@@ -203,7 +199,6 @@ body {
     margin-bottom: 40px;
 }
 
-/* ส่วนของแต่ละช่องกรอกข้อมูล */
 .input-group {
     display: flex;
     flex-direction: column;
@@ -228,12 +223,10 @@ body {
     transition: 0.3s;
 }
 
-/* อนิเมชั่นเวลาคลิแช่องพิมพ์ */
 .input-group input:focus {
     border-color: #6E0406;
 }
 
-/* ปุ่มกดเข้่าสู่ระบบ */
 .form-action {
     display: flex;
     justify-content: flex-end;
@@ -257,7 +250,6 @@ body {
     background-color: #8c2224;
 }
 
-/* ส่วนของ regulation.html  */
 .download-wrapper {
     display: flex;
     justify-content: center;
@@ -285,7 +277,6 @@ body {
     cursor: pointer;
 }
 
-/* พื้นหลังตัวกลบ่องดาวน์โหลด */
 .download-item {
     display: flex;
     justify-content: space-between;
@@ -316,8 +307,6 @@ body {
     color: #b47777;
 }
 
-/* ส่วนหน้า Register.html */
-
 .register-wrapper {
     display: flex;
     justify-content: center;
@@ -346,7 +335,6 @@ body {
     color: #888;
 }
 
-/* จัด layout form */
 .register-form {
     display: flex;
     flex-direction: column;
@@ -356,7 +344,7 @@ body {
 
 .form-row {
     display: flex;
-    gap: 20px; /* ระยะห่างระหว่างช่องกรอกแต่ละช่องในแนวนอน */
+    gap: 20px;
     width: 100%;
 }
 
@@ -397,7 +385,6 @@ body {
     border-color: #6E0406;
 }
 
-/* ปุ่ม submit / reset */
 .form-actions {
     display: flex;
     justify-content: center;
@@ -437,15 +424,11 @@ body {
     background-color: #33170a;
 }
 
-/* ส่วนของ Register-new.html */
-
-/* container and sub */
 .form-container {
     width: 100%;
     max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
-    
 }
 
 .form-section {
@@ -465,7 +448,6 @@ body {
     margin-bottom: 2px;
 }
 
-/* ปรับสัดส่วนคอลัมน์ในฟอร์ม */
 .col-title {
     flex: 0.3;
     min-width: 120px;
@@ -482,7 +464,6 @@ body {
     flex: 1 1 100%;
 }
 
-/* ช่องยืนยันความถูกต้อง */
 .form-checkbox {
     display: flex;
     align-items: center;
@@ -499,9 +480,7 @@ body {
     cursor: pointer;
 }
 
-/* รองรับการแสดงผลบนหน้าจอมือถือ */
 @media (max-width: 768px) {
-    /* ปรับระยะขอบของ Navbar ให้กระชับขึ้น */
     .navbar {
         padding: 10px 15px;
         flex-wrap: wrap;
@@ -512,21 +491,19 @@ body {
         gap: 8px;
     }
 
-    /* ย่อขนาดโลโก้ */
     .logo-img img {
         width: 55px;
     }
 
-    /* ปรับขนาดตัวอักษรชื่อมหาวิทยาลัย */
     .logo-text {
         font-size: 13px;
         line-height: 1.2;
     }
 
-    /* ซ่อนชื่อภาษาอังกฤษบนหน้าจอมือถือเพื่อประหยัดพื้นที่ */
     .logo-text span {
         display: none;
     }
+
     .form-row {
         flex-direction: column;
         gap: 15px;
@@ -535,4 +512,73 @@ body {
     .col-title, .col-firstname, .col-lastname, .col-half {
         width: 100%;
     }
+}
+
+.site-footer {
+    background-color: #660000;
+    color: #ffffff;
+    padding: 25px 0 0 0;
+    font-size: 13px;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-brand h3 {
+    margin: 0 0 4px 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.footer-brand p {
+    margin: 2px 0;
+    color: #dddddd;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    border-bottom: 2px solid #a30000;
+    padding-bottom: 4px;
+    display: inline-block;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-contact p {
+    margin: 4px 0;
+    font-size: 12px;
+}
+
+.footer-bottom {
+    background-color: #4a0000;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 11px;
+    color: #cccccc;
 }
